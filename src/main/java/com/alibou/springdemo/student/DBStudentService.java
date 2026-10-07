@@ -8,8 +8,9 @@ import org.springframework.stereotype.Service;
 public class DBStudentService implements StudentService {
 
   private final StudentRepository repository;
-
-  public DBStudentService(StudentRepository repository) {
+  private final StudentPasswordEncoder passwordEncoder;
+  
+  public DBStudentService(StudentRepository repository, StudentPasswordEncoder passwordEncoder) {
     this.repository = repository;
   }
 
